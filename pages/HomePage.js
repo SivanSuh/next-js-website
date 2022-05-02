@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.wrapper}>
-        <h2 className={styles.name}>
+        <h2 className="text-2xl text-white hover:text-yellow-500">
           <Link href={"/"}>LESSCHAR</Link>
         </h2>
         <ul className={styles.navi}>
