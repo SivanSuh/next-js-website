@@ -1,28 +1,16 @@
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import Image from "next/image";
+import image from "../public/manzara3.jpg";
 function HomePage() {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.wrapper}>
-        <h2 className="text-2xl text-white hover:text-yellow-500">
-          <Link href={"/"}>LESSCHAR</Link>
-        </h2>
-        <ul className={styles.navi}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li style={{ margin: "0 20px" }}>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href={"/contact"}>Contact</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div className="w-10/12 mx-auto my-3 p-5  flex felx-col justify-center items-center ">
+      <Image
+        className="mx-auto "
+        width={500}
+        height={400}
+        src={image}
+        alt="image"
+      />
+    </div>
   );
 }
 
