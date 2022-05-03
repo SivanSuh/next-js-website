@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/Link";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const header = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const HandleClick = () => {
+    setOpen(!open);
+  };
   return (
     <nav className="w-full h-16 bg-cyan-600 text-white flex  justify-center items-center">
       <div className="w-11/12 mx-auto flex justify-between">
@@ -21,7 +25,9 @@ const header = () => {
             <Link href="/contact">CONTACT</Link>
           </li>
         </ul>
-        <GiHamburgerMenu className="md:hidden visible text-2xl" />
+        <div className="md:hidden visible text-3xl" onClick={HandleClick}>
+          {open ? <GiHamburgerMenu /> : <AiOutlineClose />}
+        </div>
       </div>
     </nav>
   );
