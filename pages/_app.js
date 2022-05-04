@@ -1,13 +1,12 @@
 import "../styles/globals.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Layout from "../components/Layout";
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Header />
+    // <div className="sm:h-full h-screen ">
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </Layout>
+    // </div>
   );
 }
 

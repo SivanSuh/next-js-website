@@ -8,13 +8,20 @@ const header = () => {
   const HandleClick = () => {
     setOpen(!open);
   };
+
   return (
-    <nav className="w-full h-16 bg-cyan-600 text-white flex  justify-center items-center">
-      <div className="w-11/12 mx-auto flex justify-between">
-        <h2 className="text-2xl text-white hover:text-yellow-500">
+    <nav
+      className={`w-full h-auto p-3 bg-black text-white flex   justify-center items-center `}
+    >
+      <div className="w-11/12 mx-auto flex justify-between items-center">
+        <h2 className="text-2xl text-white hover:text-yellow-500 ">
           <Link href={"/"}>NEXT JS</Link>
         </h2>
-        <ul className="md:flex  md:flex-row flex-col items-center md:visible hidden text-white text-xl ">
+        <ul
+          className={`md:visible md:flex  md:flex-row p-3 flex-col justify-center text-center items-center text-white text-xl ${
+            open ? "visible" : " hidden "
+          }   `}
+        >
           <li className=" hover:text-yellow-500 hover:underline">
             <Link href="/">HOME</Link>
           </li>
@@ -26,7 +33,7 @@ const header = () => {
           </li>
         </ul>
         <div className="md:hidden visible text-3xl" onClick={HandleClick}>
-          {open ? <GiHamburgerMenu /> : <AiOutlineClose />}
+          {open ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </div>
       </div>
     </nav>
