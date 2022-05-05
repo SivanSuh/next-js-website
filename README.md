@@ -7,4 +7,7 @@
 - `Next js`
 - `Css`
 
+#### Foto
+
+![Screenshot](../web/public/next.png)
 ... Not Done

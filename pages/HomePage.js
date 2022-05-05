@@ -8,7 +8,7 @@ function HomePage() {
       <Head>
         <title>Home Page</title>
       </Head>
-      <div className="md:w-11/12 w-full h-auto md:h-screen  mx-auto my-5 p-5  flex md:flex-row  flex-col justify-center items-center  ">
+      <div className="md:w-11/12 w-full h-full md:h-screen  mx-auto my-5 p-5  flex md:flex-row  flex-col justify-center items-center  ">
         <div className="sm:w-5/12 w-full ">
           <Image objectFit="cover" src={foto} alt="foto" layout="responsive" />
         </div>
